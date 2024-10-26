@@ -1,0 +1,50 @@
+@import './fonts.scss';
+
+
+:root{
+    --bg:radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(245,70,252,0) 100%);
+    --text:black;
+    --sidebarBg: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(245,70,252,0) 100%);
+}
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'OpenSans';
+}
+a{
+    text-decoration: none;
+}
+ul{
+
+    list-style: none;
+}
+
+button,
+input{
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.container {
+    width: 100%;
+    padding-left: 15% ;
+    height: 100%;
+    
+}
+.main{
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+}
+.main.dark{
+    --bg: radial-gradient(circle, rgba(68,27,64,1) 53%, rgba(131,58,180,1) 79%);
+    --text:white;
+    --sidebarBg: radial-gradient(circle, rgba(68,27,64,1) 53%, rgba(131,58,180,1) 79%);
+}
+@media(max-width:1000px){
+    .container{
+        padding-left: 0;
+    }
+}

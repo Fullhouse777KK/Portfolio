@@ -1,0 +1,70 @@
+.sidebar{
+padding: 30px;
+background-color: var(--sidebarBg);
+width: 15%;
+height: 100vh;
+border-right: 1px solid rgb(212,214,224);
+position: fixed;
+top: 0;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+&__link{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    color: var(--text);
+    font-size: x-large;
+    font-weight: 600;
+    cursor: pointer;
+    &_list{
+        color: var(--text);
+    }
+    &_list:hover{
+        color: red;
+    }
+}
+
+// &__lang{
+//     display: flex;
+//     gap: 20px;
+//     &_btn{
+//         width: 30px;
+//         height: 30px;
+//     }
+// }
+
+&__img{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 90%;
+}
+}
+
+@media(max-width:1000px){
+    .sidebar{
+        position: relative;
+        width: 100%;
+        height: 100px;
+        &__link{
+            flex-direction: row;
+            justify-content: center;
+            gap: 50px;
+            
+        }
+        &__img{
+                left: 48%;
+                top: 85%;
+            }
+    }
+}
+@media(max-width:462px){
+.sidebar{
+    height: 200px;
+    &__link{
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+}
+}
